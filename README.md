@@ -199,6 +199,6 @@ Training procedure for Question-Answering:
 
 p.s I keyboard interrupted the runtime, as I didn't have the resources and time to run the training. 
 
-References: BERT documentation. https://huggingface.co/docs/transformers/en/model_doc/bert#overview
+References: [BERT documentation](https://huggingface.co/docs/transformers/en/model_doc/bert#overview)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
