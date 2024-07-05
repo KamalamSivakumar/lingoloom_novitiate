@@ -54,5 +54,11 @@ Nuances learnt:
 3. As VADER is mainly trained on social media (tweets/comments etc), it did not classify movie_reviews effectively, tried to compute the VADER scores for each sentence in a movie review, with a compound measure that indicates the normalized or aggregated polarity score for that sentence. The result did come out better. 
 4. Extracted features that can be used to train the ML models, positive scores and compound scores, the feature extraction can also be extended to most frequent words used in a positive/negative review.
 
+References:
+
+https://github.com/cjhutto/vaderSentiment
+
+https://towardsdatascience.com/a-guide-to-text-classification-and-sentiment-analysis-2ab021796317
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
