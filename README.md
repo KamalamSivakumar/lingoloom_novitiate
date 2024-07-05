@@ -1,6 +1,6 @@
 # lln - lingo(nlp) loom(models) novitiate(novice)
 
-Welcome to my repository, featuring all the foundational projects I've completed while learning about NLP and LLMs. 
+Welcome to my repository, featuring all the foundational projects I've completed while learning about nlp and llms. 
 
 This readme file is more like a blog, where I mention each of the project links along with what I've learnt from working on the same. 
 
