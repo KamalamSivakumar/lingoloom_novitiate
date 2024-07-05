@@ -2,7 +2,7 @@
 
 Welcome to my repository, featuring all the foundational projects I've completed while learning about nlp and llms. 
 
-This readme file is more like a blog, where I mention each of the project links along with what I've learnt from working on the same. 
+This readme file is more like a blog, where I mention each of the project's link along with what I've learnt from working on the same. 
 
 I've honed my skills by diving into blogs and documentation, and I'll be including those references as well.
 
