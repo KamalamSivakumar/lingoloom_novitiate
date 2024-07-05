@@ -62,3 +62,30 @@ https://towardsdatascience.com/a-guide-to-text-classification-and-sentiment-anal
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+### [Aspect Based Analysis](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/ASBA%20using%20spacy%20and%20VADER.ipynb)
+
+Why ASBA?
+
+Often, a business requirement is to understand and analyze customer reviews. When we can comprehend the reviews the “product”, “component” or “aspect” wise, we can make more use of the reviews.
+
+ASBA has 3 steps (in an overview):
+1. Extract aspect candidates.
+2. Classify the aspect candidates as aspects or non-aspects.
+3. Associate a polarity to each extracted aspect.
+
+Performing ASBA with spaCy and VADER:  
+With spaCy’s inbuilt language models, it is easier to extract the token’s Part-Of-Speech (POS) tag.
+
+An assumption made: Usually the features of products and services are mostly nouns and compound nouns.
+
+Accordingly, their BOI tags are considered for identifying the “target”/”aspect” and its adjective would be the corresponding “description”/”opinion”.
+
+Once identified, the polarity scores can either be assigned by employing TextBlob/VADER libraries. In case of VADER, the threshold for classifying is considered as follows: pos-> > 0.5 & neg-> <=0.5.
+
+Spaces for improvement: As of now, in regard with the aspect extraction, only the final occurrence of adj is considered. With regards to assigning polarity scores, non-lexical models can be experimented with. 
+
+References:
+
+https://medium.com/nlplanet/quick-intro-to-aspect-based-sentiment-analysis-c8888a09eda7
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
