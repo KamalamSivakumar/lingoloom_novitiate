@@ -1,4 +1,4 @@
-# lln - lingo(nlp) loom(models) novitiate(beginning)
+# lln - lingo(nlp) loom(models) novitiate(novice)
 
 Welcome to my repository, featuring all the foundational projects I've completed while learning about NLP and LLMs. 
 
