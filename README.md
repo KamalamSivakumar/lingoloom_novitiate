@@ -135,8 +135,11 @@ Commands list that enabled custom NER using spaCy:
 … --paths.dev "C:/Users/kamalam.s/Desktop/kamalam's/nlp dev/trained_models/test_data.spacy" (path to test data)
 
 The commands can be customised to include parameters to our requirement. References: spaCy Documentation: https://spacy.io/usage/training
+
 The model’s performance can be improved by training on appropriate custom annotated data.
+
 Creating a custom annotated data on a larger scale is a greater task. 
+
 Understood the general flow of how Custom NER works. 
 
 References:
