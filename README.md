@@ -209,6 +209,6 @@ Question Answering by an llm based on a context.
 
 Context documents stored as vector databases. 
 
-Employing Q&A through text-generation, since debugging Q&A using llms and context info. (a work around basically as HuggingFace Pipeline Only supports text-generation, text2text-generation, summarization and translation for now)
+Employing Q&A through text-generation - a work around basically as HuggingFace Pipeline Only supports text-generation, text2text-generation, summarization and translation for now.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
