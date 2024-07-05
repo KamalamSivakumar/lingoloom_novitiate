@@ -202,3 +202,13 @@ p.s I keyboard interrupted the runtime, as I didn't have the resources and time 
 References: [BERT documentation](https://huggingface.co/docs/transformers/en/model_doc/bert#overview)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### [Question-Answering and Text-Generation](https://github.com/KamalamSivakumar/lingoloom_novitiate/blob/main/text-generation%20%26%20question-answering.ipynb)
+
+Question Answering by an llm based on a context. 
+
+Context documents stored as vector databases. 
+
+Employing Q&A through text-generation, since debugging Q&A using llms and context info. (a work around basically as HuggingFace Pipeline Only supports text-generation, text2text-generation, summarization and translation for now)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
