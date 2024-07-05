@@ -118,3 +118,29 @@ References:
 Notebooks on NER from [Dipanjan Sarkar](https://github.com/dipanjanS)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+### [Custom NER](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/Custom%20NER.ipynb)
+
+Key points:
+1. Config File: Aids in setting the parameters and values for the respective spacy pipeline. Base config file (template) can be downloaded from the documentation: https://spacy.io/usage/training based on the task at hand. Auto-filling of other details can be done for ease of use. We can set the parameters of the pipeline in a bespoke manner as well. 
+2. Annotating the data for validation and saved as a list of [text, entites_dict]. Various custom text annotators are available over the internet, I have used: https://tecoholic.github.io/ner-annotator/
+3. Using DocBin object from spacy to load our newly annotated data. The DocBin class is used to efficiently serialize the information from a collection of Doc (spacy) objects.
+4. Then, the custom spaCy NER model can be trained, and used to give annotations.
+   
+Commands list that enabled custom NER using spaCy:
+1. Auto filling the config file: !python -m spacy init fill-config ner_config.cfg (template) config.cfg (Auto filling based on the template)
+2. To train: !python -m spacy train "C:/Users/kamalam.s/Desktop/kamalam's/nlp dev/config.cfg" (path to config)
+…  --output "C:/Users/kamalam.s/Desktop/kamalam's/nlp dev/trained_models/output" (path to output folder for the model to save)
+…  --paths.train "C:/Users/kamalam.s/Desktop/kamalam's/nlp dev/trained_models/train_data.spacy" (path to train data)
+… --paths.dev "C:/Users/kamalam.s/Desktop/kamalam's/nlp dev/trained_models/test_data.spacy" (path to test data)
+
+The commands can be customised to include parameters to our requirement. References: spaCy Documentation: https://spacy.io/usage/training
+The model’s performance can be improved by training on appropriate custom annotated data.
+Creating a custom annotated data on a larger scale is a greater task. 
+Understood the general flow of how Custom NER works. 
+
+References:
+
+https://medium.com/@mjghadge9007/building-your-own-custom-named-entity-recognition-ner-model-with-spacy-v3-a-step-by-step-guide-15c7dcb1c416
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
