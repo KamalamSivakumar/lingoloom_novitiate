@@ -90,7 +90,7 @@ https://medium.com/nlplanet/quick-intro-to-aspect-based-sentiment-analysis-c8888
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Named Entity Recognition](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/Named%20Entity%20Recognition.ipynb)
+### [Named Entity Recognition](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/Named%20Entity%20Recognition.ipynb)
 
 Goal of NER: Identifying all textual mentions of the named entities. Involves two aspects namely:
 1. Identifying the boundaries of the named entity.
