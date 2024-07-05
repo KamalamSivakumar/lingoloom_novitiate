@@ -89,3 +89,32 @@ References:
 https://medium.com/nlplanet/quick-intro-to-aspect-based-sentiment-analysis-c8888a09eda7
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Named Entity Recognition](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/Named%20Entity%20Recognition.ipynb)
+
+Goal of NER: Identifying all textual mentions of the named entities. Involves two aspects namely:
+1. Identifying the boundaries of the named entity.
+2. Identifying the type of the entity.
+     
+Chunking/Shallow Parsing/Light Parsing: Inside, Others and Before (IOB Components). 
+
+Used spaCy’s displacy for viewing the dependencies/hierarchies between the chunks. Could be done through nltk as well but couldn't install ghostscripts/standford nlp parser for viewing the hierarchy in the chunks. (admin rights required to install the same)
+
+Tagging: Part of Speech Tagging, that could be done through in-built methods using nltk/spacy or by configuring custom POS tagger using existing methods, for example by defining a regex tagger or by defining an NGramTagger.
+
+Used ClassifierBasedPOSTagger from nltk to build a POS Tagger that learns through a classification model (NaiveBayesClassifier)
+
+Used spaCy’s Named Entity Recognition package and viewed the results. Used spaCy’s displacy to render the results better. 
+
+Learnt to build a NER model by using Conditonal Random Fields (CRF). CRF is used for prediction tasks where contextual information in our case, state of the neighboring words affects the current prediction. Trained using Gradient Descent approach, (MLE) where the parameters are optimized to maximise the probability of the correct output sequence.
+
+Nuances learnt:
+1. backoff concept in taggers: backoff is nothing but when any of the words in the input sequence, don't have a corresponding tag, it's assigned None, when with backoff mentioned, the backup tagger method mentioned is used. This improves the performance of the corresponding taggers significantly. 
+2. In order to use CRF for NER, the features must be defined. The following features were considered: the word, the last 3 characters, the last 2 characters, its POS tag, if it’s a digit. Additionally, [BOS] (beginning of a sentence) and [EOS] (end of a sentence) were added as well.
+3. The crf_suite from scikit-learn is easier to implement with, the desired MLE algorithm can be mentioned, and if we need to consider all possible options in the CRF. The model performed quite well, further improvements could be made by extending the feature engineering and fine tuning the hyperparameters.
+
+References:
+
+Notebooks on NER from [Dipanjan Sarkar](https://github.com/dipanjanS)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
