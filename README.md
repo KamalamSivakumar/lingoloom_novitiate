@@ -147,3 +147,58 @@ References:
 https://medium.com/@mjghadge9007/building-your-own-custom-named-entity-recognition-ner-model-with-spacy-v3-a-step-by-step-guide-15c7dcb1c416
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### [BERT for question answering](https://github.com/KamalamSivakumar/lingoloom_novitiae/blob/main/BERT%20for%20Question%20Answering.ipynb)
+
+Basics of BERT: (based on its documentation)
+1. Bidirectional Encoder Representations from Transformers. The pre-trained BERT model can be fine-tuned with just an additional output layer to create models for a wide range of tasks, such as question answering, without substantial task-specific architecture modifications.
+2. Considers context from both right and left.
+3. BERT is suitable for Text Classification, Question Answering, Summarization, but not for Text Generation. This is because it was modelled with Masked Language Modelling and Next Sentence
+Prediction objectives.
+4. Corrupts the inputs by using random masking (making it not optimal for text generation).
+
+Before applying BERT for a task at hand, the data must be manipulated to help BERT in achieving the objectives. The manipulation depends on the task at hand. 
+
+Text Classification:
+1. Tokenize the sentences.
+2. Add the [CLS] and [SEP] tags for each sentence. 
+3. Pad and truncate sentences to the maximum length. (padded on the right by default)
+4. Construct attention masks. 
+5. Trained and Classified using “BertForSequenceClassification”.
+              
+Question Answering:
+1. Tokenize the question and context.
+2. Chunk or split the context sentences to overlap.
+3. Add the [CLS] and [SEP] tags for each sentence.
+4. Truncate only the context based on the maximum length context.
+5. Set doc_stride, sets the pace for considering context windows. 
+6. Set “True” for overlapping token chunks, ensures our answer doesn't get missed.
+7. Set “True” for offsets, returns the mapping between tokens and position in the original context.
+8. Sequence Ids are used to identify if question (0) or context (1).
+9. Find the answer token_start and token_end position.
+10. Using datasets.map(prepare_train_features, batched=True, remove_columns=datasets["train"].column_names) to get our data is manipulated to apply. (Basically, tokenizing the dataset with the above-mentioned components in place.)
+11. Trained and Classified using “AutoModelForQuestionAnswering”/ “BertForQuestionAnswering”
+
+Nuances learnt:
+
+Training procedure for Question-Answering:
+1. The training arguments are defined using “TrainingArguments” from the transformers library. Defines the following:
+
+    >>#folder path to save the model checkpoints.
+    >>
+    >>#evaluation strategy, done at the end of each epoch.
+    >>
+    >>#defining the learning rate
+    >>
+    >>#defining the train size
+    >>
+    >>#defining the batch size
+    >>
+    >>#no.of epochs
+2. The “Trainer” method considers the training arguments and the manipulated dataset for training.
+
+p.s I keyboard interrupted the runtime, as I didn't have the resources and time to run the training. 
+
+References: BERT documentation. https://huggingface.co/docs/transformers/en/model_doc/bert#overview
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
