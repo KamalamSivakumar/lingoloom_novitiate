@@ -4,7 +4,8 @@ Welcome to my repository, featuring all the foundational projects I've completed
 
 This readme file is more like a blog, where I mention each of the project's link along with what I've learnt from working on the same. 
 
-I've honed my skills by diving into blogs and documentation, and I'll be including those references as well.
+I've honed my skills by diving into blogs and documentation, and I'll be including those references as well.  
+Feel free to reach out if you spot any mistakes or have suggestions, as I'm still learning and appreciate any feedback.
 
 Hope this is useful and enjoyable. 
 
